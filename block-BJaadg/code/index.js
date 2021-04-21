@@ -38,8 +38,9 @@ from.concat(` said `, quote, ` to `, to);
 /*
 6. Does from, to and quote ends with "rk". Check all three.
 */
-let newArray = from.concat(` said `, quote, ` to `, to);
-newArray.endsWith(`rk`);
+from.endsWith(`rk`);
+quote.endsWith(`rk`);
+to.endsWith(`rk`);
 /*
 7. Does quote includes the word "Only"
 */
@@ -65,7 +66,7 @@ quoteSplitted.join(` `).replace(`today`, `tomorrow`);
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
-
+quote.indexOf(`o`, quote.indexOf(`o`) + 1);
 /*
 13. Find the last index of letter "a" in quote.
 */
@@ -73,7 +74,7 @@ quote.lastIndexOf(`a`);
 /*
 14. Find the second last index of letter "a" in quote.
 */
-
+quote.lastIndexOf(`a`, quote.lastIndexOf(`a`) - 1);
 /*
 15. Make the quote 70 character long. If it has less characters add rest as .......
 Example: "Hello" (convert to 10 characters) => "Hello....."

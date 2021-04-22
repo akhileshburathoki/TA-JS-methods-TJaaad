@@ -1,18 +1,24 @@
 let words = [
-  'mystery',
-  'brother',
-  'aviator',
-  'crocodile',
-  'pearl',
-  'orchard',
-  'crackpot',
-  'rhythm',
+  "mystery",
+  "brother",
+  "aviator",
+  "crocodile",
+  "pearl",
+  "orchard",
+  "crackpot",
+  "rhythm",
 ];
 
 // - Write a function findLongestWord that takes an array of words and returns the longest word from the array. (Use above array "words" to test it). If there are 2 with the same length, it should return the first occurrence.
-
+words
+  .map((word) => {
+    return word.length;
+  })
+  .sort();
 // - Convert the above array "words" into an array of length of word instead of word.
-
+words.map((word) => {
+  return word.length;
+});
 // - Create a new array that only contains word with atleast one vowel.
 
 // - Find the index of the word "rhythm"
@@ -42,16 +48,16 @@ let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 //- Write a function averageNumbers that receives an array of numbers and calculate the average of the numbers
 
 let strings = [
-  'seat',
-  'correspond',
-  'linen',
-  'motif',
-  'hole',
-  'smell',
-  'smart',
-  'chaos',
-  'fuel',
-  'palace',
+  "seat",
+  "correspond",
+  "linen",
+  "motif",
+  "hole",
+  "smell",
+  "smart",
+  "chaos",
+  "fuel",
+  "palace",
 ];
 
 // - Write a function averageWordLength that receives an array of words2 and calculate the average length of the words.

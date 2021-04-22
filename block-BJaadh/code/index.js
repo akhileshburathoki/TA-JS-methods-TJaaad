@@ -31,11 +31,17 @@ numbers.sort((num1, num2) => {
 // - Remove the last word in strings
 strings.pop();
 // - Find largest number in numbers
-let largest = numbers.sort((num1, num2) => {
-  num1 - num2;
-});
+let largest = numbers
+  .sort((num1, num2) => {
+    num1 - num2;
+  })
+  .pop();
 // - Find longest string in strings
-
+let longest = numbers
+  .sort((a, b) => {
+    a.length - b.length;
+  })
+  .pop();
 // - Find all the even numbers
 numbers.map((num) => {
   if (num % 2 === 0) {
@@ -51,11 +57,19 @@ numbers.map((num) => {
 // - Place a new word at the start of the array use (upshift)
 strings.unshift(`This`);
 // - Make a subset of numbers array [18,9,7,11]
-numbers.push([18, 9, 7, 11]);
+numbers.slice(3, 7);
 // - Make a subset of strings array ['a','collection']
-strings.push(["a", "collection"]);
+strings.slice(2, 3);
 // - Replace 12 & 18 with 1221 and 1881
-
+numbers.map((num) => {
+  if (num === 12) {
+    return 1221;
+  } else if (num === 18) {
+    return 1881;
+  } else {
+    return num;
+  }
+});
 // - Replace words in strings array with the length of the word
 let numWord = strings.map((wrd) => {
   return wrd.length;
@@ -74,11 +88,15 @@ var customers = [
   { firstname: "Jack", lastname: "White" },
 ];
 // - Find all customers whose firstname starts with 'J'
-
+customers.filter((val) => val.firstname.startsWith(`J`));
 // - Create new array with only first name
-
+customers.map((val) => {
+  return val.firstname;
+});
 // - Create new array with all the full names (ex: "Joe Blogs")
-
+let fullName = customers.map((val) => {
+  return `${val.firstname} ${val.lastname}`;
+});
 // - Sort the array created above alphabetically
-
+fullName.sort();
 // - Create a new array that contains only user who has at least one vowel in the firstname.

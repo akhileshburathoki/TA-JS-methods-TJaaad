@@ -1,24 +1,30 @@
 let persons = [
-  { name: 'John', grade: 8, sex: 'M' },
-  { name: 'Sarah', grade: 12, sex: 'F' },
-  { name: 'Bob', grade: 16, sex: 'M' },
-  { name: 'Johnny', grade: 2, sex: 'M' },
-  { name: 'Ethan', grade: 4, sex: 'M' },
-  { name: 'Paula', grade: 18, sex: 'F' },
-  { name: 'Donald', grade: 5, sex: 'M' },
-  { name: 'Jennifer', grade: 13, sex: 'F' },
-  { name: 'Courtney', grade: 15, sex: 'F' },
-  { name: 'Jane', grade: 9, sex: 'F' },
-  { name: 'John', grade: 17, sex: 'M' },
-  { name: 'Arya', grade: 14, sex: 'F' },
+  { name: "John", grade: 8, sex: "M" },
+  { name: "Sarah", grade: 12, sex: "F" },
+  { name: "Bob", grade: 16, sex: "M" },
+  { name: "Johnny", grade: 2, sex: "M" },
+  { name: "Ethan", grade: 4, sex: "M" },
+  { name: "Paula", grade: 18, sex: "F" },
+  { name: "Donald", grade: 5, sex: "M" },
+  { name: "Jennifer", grade: 13, sex: "F" },
+  { name: "Courtney", grade: 15, sex: "F" },
+  { name: "Jane", grade: 9, sex: "F" },
+  { name: "John", grade: 17, sex: "M" },
+  { name: "Arya", grade: 14, sex: "F" },
 ];
 
 // NOTE: You can only use reduce method to solve this exercise:
 
 // Find the average grade
-
+let averageGrade =
+  persons.reduce((acc, person) => {
+    return acc + person.grade;
+  }, 0) / persons.length;
 // Find the average grade of male
-
+let averageMaleGrade =
+  persons.reduce((acc, person) => {
+    return acc + person.grade;
+  }, 0) / persons.length;
 // Find the average grade of female
 
 // Find the highest grade
@@ -30,17 +36,17 @@ let persons = [
 // Find the highest grade for people whose name starts with 'J' or 'P'
 
 const fruitBasket = [
-  'banana',
-  'cherry',
-  'orange',
-  'apple',
-  'cherry',
-  'orange',
-  'apple',
-  'banana',
-  'cherry',
-  'orange',
-  'fig',
+  "banana",
+  "cherry",
+  "orange",
+  "apple",
+  "cherry",
+  "orange",
+  "apple",
+  "banana",
+  "cherry",
+  "orange",
+  "fig",
 ];
 
 /* 
@@ -92,18 +98,35 @@ Create these functions which accepts a number value and returns a number value:
 
 
 */
-
+function increment(num) {
+  return num + 1;
+}
+increment(3);
+function decrement(cb) {
+  return increment() - 1;
+}
+function double(num) {
+  return num * 2;
+}
+function triple() {
+  return num * 3;
+}
+function half(num) {
+  return num / 2;
+}
 let pipeline = [
-  increment,
-  double,
-  decrement,
-  decrement,
-  double,
-  triple,
-  half,
-  increment,
+  increment(3),
+  double(),
+  decrement(),
+  decrement(),
+  double(),
+  triple(),
+  half(),
+  increment(),
 ];
-
+pipeline.map((number) => {
+  return number();
+});
 /*
 Using the pipeline variable that contains the collection of functions, taking the initial value 3 find the output.
 
